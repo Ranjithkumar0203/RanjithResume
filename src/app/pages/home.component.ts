@@ -7,11 +7,11 @@ import { ResumeService } from '../resume.service';
   standalone: true,
   imports: [NgFor],
   template: `
-    <section class="card section">
-      <h2>Summary</h2>
-      <p class="muted" *ngFor="let s of data()?.summary">{{ s }}</p>
+    <section class="card section animate-fade-in">
+      <h2 class="animate-fade-in-left">Summary</h2>
+      <p class="muted animate-fade-in animate-stagger" *ngFor="let s of data()?.summary">{{ s }}</p>
       <div class="chips">
-        <span class="chip" *ngFor="let cert of data()?.certifications">{{ cert }}</span>
+        <span class="chip animate-fade-in animate-stagger" *ngFor="let cert of data()?.certifications">{{ cert }}</span>
       </div>
     </section>
   `

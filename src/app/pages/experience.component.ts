@@ -7,13 +7,13 @@ import { ResumeService } from '../resume.service';
   standalone: true,
   imports: [NgFor],
   template: `
-    <section class="card section">
-      <h2>Experience</h2>
+    <section class="card section animate-fade-in">
+      <h2 class="animate-fade-in-left">Experience</h2>
       <div class="grid">
-        <div class="card" *ngFor="let exp of data()?.experience">
-          <h3>{{ exp.company }} <small class="muted">({{ exp.year }})</small></h3>
+        <div class="card animate-fade-in animate-stagger animate-glow" *ngFor="let exp of data()?.experience">
+          <h3 class="animate-fade-in-left">{{ exp.company }} <small class="muted">({{ exp.year }})</small></h3>
           <ul>
-            <li *ngFor="let h of exp.highlights">{{ h }}</li>
+            <li class="animate-fade-in animate-stagger" *ngFor="let h of exp.highlights">{{ h }}</li>
           </ul>
         </div>
       </div>

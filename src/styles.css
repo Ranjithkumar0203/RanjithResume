@@ -27,3 +27,190 @@ footer { text-align:center; margin: 2rem 0; color: var(--muted); }
 .navbar a { padding: .4rem .7rem; border-radius: 10px; }
 .navbar a.active { background: #1f2937; }
 @media (max-width: 720px) { .grid-2 { grid-template-columns: 1fr; } }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 50% { border-color: var(--accent); }
+  51%, 100% { border-color: transparent; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(1deg); }
+  50% { transform: translateY(-5px) rotate(-1deg); }
+  75% { transform: translateY(-15px) rotate(0.5deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+@keyframes slideProgress {
+  from { width: 0%; }
+  to { width: var(--progress-width); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(124, 156, 255, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(124, 156, 255, 0.6); }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.animate-typing {
+  overflow: hidden;
+  border-right: 3px solid var(--accent);
+  white-space: nowrap;
+  animation: typing 3s steps(30) forwards, blink 1s infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Staggered animations */
+.animate-stagger:nth-child(1) { animation-delay: 0.1s; }
+.animate-stagger:nth-child(2) { animation-delay: 0.2s; }
+.animate-stagger:nth-child(3) { animation-delay: 0.3s; }
+.animate-stagger:nth-child(4) { animation-delay: 0.4s; }
+.animate-stagger:nth-child(5) { animation-delay: 0.5s; }
+.animate-stagger:nth-child(6) { animation-delay: 0.6s; }
+
+/* Enhanced hover effects */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.4);
+}
+
+.chip {
+  transition: all 0.2s ease;
+}
+
+.chip:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: scale(1.05);
+}
+
+.navbar a {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(124, 156, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.navbar a:hover::before {
+  left: 100%;
+}
+
+.navbar a:hover {
+  background: #374151;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(124, 156, 255, 0.3);
+}
+
+/* Progress bar animations */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--chip);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #60a5fa);
+  border-radius: 4px;
+  animation: slideProgress 2s ease-out forwards;
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}

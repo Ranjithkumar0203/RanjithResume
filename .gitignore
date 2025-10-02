@@ -8,7 +8,8 @@
 /bazel-out
 
 # Angular cache
-/.angular/cache
+/.angular/
+.angular/
 
 # Dependencies
 /node_modules
