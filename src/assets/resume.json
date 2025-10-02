@@ -1,0 +1,134 @@
+{
+  "name": "Ranjith Kumar S",
+  "title": "MEAN Stack Developer | Oracle Certified Java Programmer",
+  "location": "Chennai, Tamil Nadu, India",
+  "email": "ranjith.kumar03@gmail.com",
+  "phone": "+91-7358061196",
+  "summary": [
+    "Oracle Certified Java Programmer with ~5 years of experience in MEAN stack development and Micro Frontends (Module Federation).",
+    "Experienced with Angular (v9+), Node.js, SDLC, agile teams, and cloud pipelines.",
+    "Strong analytical abilities; effective at coordinating across teams and delivering under pressure."
+  ],
+  "certifications": [
+    "AWS Cloud Quest Cloud Practitioner Badge",
+    "Oracle Certified Java Programmer",
+    "ISTQB Certified Test Engineer",
+    "ISTQB Certified Test Manager",
+    "TUV Certified",
+    "ITIL Certified"
+  ],
+  "skills": [
+    "Angular",
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Mongoose",
+    "MySQL",
+    "Jasmine",
+    "Cypress",
+    "CDK DragDrop",
+    "Socket.io",
+    "Azure DevOps",
+    "AWS",
+    "JIRA",
+    "Git",
+    "Maven",
+    "Module Federation",
+    "Micro Frontends"
+  ],
+  "experience": [
+    {
+      "company": "Gainwell Technologies",
+      "year": "2023",
+      "highlights": [
+        "Micro frontend using Angular 9 & Module Federation",
+        "Developed Angular modules and server-side pagination",
+        "Validated ATM screen code; supported JS/TS fixes",
+        "Created Node.js APIs with MongoDB",
+        "Deployed through Azure pipelines; daily Scrum participation"
+      ]
+    },
+    {
+      "company": "ACL Digital",
+      "year": "2022",
+      "highlights": [
+        "Developed Angular modules with server-side pagination",
+        "CDK Drag & Drop; Socket.io features",
+        "Node.js APIs with MongoDB; Scrum participation"
+      ]
+    },
+    {
+      "company": "R Systems",
+      "year": "2021",
+      "highlights": [
+        "Bug fixing of ATM screens; Angular modules",
+        "Server-side pagination; Socket.io features",
+        "Created schemas & models (Mongoose); PRs via JIRA",
+        "Unit tests with Jasmine; e2e with Cypress + Cucumber"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "CPE Software Update",
+      "client": "KLA",
+      "duration": "Aug 2020 \u2013 present",
+      "stack": [
+        "MEAN",
+        "MongoDB",
+        "Express",
+        "Angular 9",
+        "Node.js"
+      ],
+      "description": "In-place updating of a live CPE app with auto/manual install, backups, and deploys.",
+      "responsibilities": [
+        "Functional orientation, layout design, coding & implementation",
+        "Integrity analysis and documentation"
+      ]
+    },
+    {
+      "name": "CPE",
+      "client": "KLA",
+      "duration": "June 2019",
+      "stack": [
+        "MEAN",
+        "MongoDB",
+        "Express",
+        "Angular 9",
+        "Node.js"
+      ],
+      "description": "Workflow-driven approvals for Augmented Reality/Realwear connections; scheduled VPN tunnels.",
+      "responsibilities": [
+        "Functional orientation, layout design, coding & implementation"
+      ]
+    }
+  ],
+  "industrial_automation": [
+    {
+      "employer": "Schneider Electric (Triconex), Singapore",
+      "period": "2012 \u2013 2017",
+      "role": "Project Engineer",
+      "highlights": [
+        "ORPIC/Liwa Plastics (3 compressors)",
+        "SIL-3 controller testing, HA tests, HMI graphics, third-party integrations",
+        "Test plans, FDS, I/O docs, and shipped documentation"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.E. (Instrumentation and Control Engineering)",
+      "university": "University of Madras, Tamil Nadu",
+      "field": "Instrumentation and Control"
+    }
+  ],
+  "languages": [
+    "English",
+    "Tamil",
+    "Malayalam",
+    "Hindi",
+    "Basic German"
+  ]
+}
