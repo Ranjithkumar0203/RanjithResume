@@ -1,11 +1,13 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { NgIf } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { ResumeService } from './resume.service';
+import { PdfService } from './pdf.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [NgIf, RouterOutlet, RouterLink, RouterLinkActive],
   providers: [ResumeService],
   template: `
     <!-- Floating Background Elements -->
@@ -36,19 +38,33 @@ import { ResumeService } from './resume.service';
           <div class="muted animate-fade-in-left">{{ data()?.title }}</div>
         </div>
         <div class="header-actions">
-          <a href="assets/resume-ranjith.pdf" 
-             download="Ranjith-Resume.pdf" 
-             class="download-btn animate-fade-in-right animate-pulse">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-              <path d="M12,11L16,15H13V19H11V15H8L12,11Z"/>
-            </svg>
-            Download Resume
-          </a>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <button (click)="generatePdf()" 
+                    class="download-btn animate-fade-in-right animate-pulse"
+                    title="Generate PDF from latest resume data">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                <path d="M12,11L16,15H13V19H11V15H8L12,11Z"/>
+              </svg>
+              Generate PDF
+            </button>
+            <a href="assets/resume-ranjith.pdf" 
+               download="Ranjith-Resume.pdf" 
+               class="download-btn animate-fade-in-right animate-pulse">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                <path d="M12,11L16,15H13V19H11V15H8L12,11Z"/>
+              </svg>
+              Download Resume
+            </a>
+          </div>
           <div class="contact-info muted animate-fade-in-right" style="text-align:right">
             <div><a [href]="'mailto:'+data()?.email">{{ data()?.email }}</a></div>
             <div><a [href]="'tel:'+data()?.phone">{{ data()?.phone }}</a></div>
-            <div>{{ data()?.location }}</div>
+            <div><a [href]="data()?.linkedin" target="_blank" rel="noopener">LinkedIn</a></div>
+            <div *ngIf="data()?.website"><a [href]="data()?.website" target="_blank" rel="noopener">Portfolio</a></div>
+            <div>{{ data()?.location }}<span *ngIf="data()?.zipCode"> - {{ data()?.zipCode }}</span></div>
+            <div *ngIf="data()?.industry">{{ data()?.industry }}</div>
           </div>
         </div>
       </header>
@@ -101,12 +117,15 @@ import { ResumeService } from './resume.service';
       color: white;
       border-radius: 12px;
       text-decoration: none;
+      border: none;
       font-weight: 600;
       font-size: 0.9rem;
+      cursor: pointer;
       transition: all 0.3s ease;
       box-shadow: 0 4px 15px rgba(124, 156, 255, 0.4);
       position: relative;
       overflow: hidden;
+      font-family: inherit;
     }
     .download-btn::before {
       content: '';
@@ -147,6 +166,15 @@ import { ResumeService } from './resume.service';
 })
 export class AppComponent {
   readonly year = signal(new Date().getFullYear());
-  constructor(private resume: ResumeService) {}
+  constructor(private resume: ResumeService, private pdf: PdfService) {}
   get data() { return this.resume.data; }
+  
+  generatePdf(): void {
+    const resumeData = this.resume.data();
+    if (resumeData) {
+      this.pdf.generateResumePdf(resumeData);
+    } else {
+      alert('Resume data is not loaded yet. Please try again.');
+    }
+  }
 }

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { ResumeService } from '../resume.service';
 
 @Component({
   selector: 'app-education',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, NgIf],
   template: `
     <section class="card section">
       <h2>Education & Languages</h2>
@@ -14,6 +14,7 @@ import { ResumeService } from '../resume.service';
           <strong>{{ ed.degree }}</strong>
           <div class="muted">{{ ed.university }}</div>
           <div class="muted">{{ ed.field }}</div>
+          <div class="muted" *ngIf="ed.year">{{ ed.year }}</div>
         </div>
       </div>
       <h3>Languages</h3>

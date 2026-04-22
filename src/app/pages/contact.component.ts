@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { NgIf } from '@angular/common';
 import { ResumeService } from '../resume.service';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
+  imports: [NgIf],
   template: `
     <section class="card section animate-fade-in">
       <h2 class="animate-fade-in-left">Contact</h2>
@@ -13,7 +15,10 @@ import { ResumeService } from '../resume.service';
           <h3>Get in Touch</h3>
           <p class="animate-fade-in animate-stagger">Email: <a [href]="'mailto:'+data()?.email">{{ data()?.email }}</a></p>
           <p class="animate-fade-in animate-stagger">Phone: <a [href]="'tel:'+data()?.phone">{{ data()?.phone }}</a></p>
-          <p class="animate-fade-in animate-stagger">Location: {{ data()?.location }}</p>
+          <p class="animate-fade-in animate-stagger">LinkedIn: <a [href]="data()?.linkedin" target="_blank" rel="noopener">{{ data()?.linkedin }}</a></p>
+          <p class="animate-fade-in animate-stagger" *ngIf="data()?.website">Portfolio: <a [href]="data()?.website" target="_blank" rel="noopener">{{ data()?.website }}</a></p>
+          <p class="animate-fade-in animate-stagger">Location: {{ data()?.location }}<span *ngIf="data()?.zipCode"> - {{ data()?.zipCode }}</span></p>
+          <p class="animate-fade-in animate-stagger" *ngIf="data()?.industry">Industry: {{ data()?.industry }}</p>
         </div>
         
         <div class="download-section animate-fade-in-right">

@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { NgFor, NgStyle } from '@angular/common';
+import { NgFor, NgIf, NgStyle } from '@angular/common';
 import { ResumeService } from '../resume.service';
 import { HighlightSkillDirective } from '../highlight-skill.directive';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [NgFor, HighlightSkillDirective, NgStyle],
+  imports: [NgFor, NgIf, HighlightSkillDirective, NgStyle],
   template: `
     <section class="card section animate-fade-in">
       <h2 class="animate-fade-in-left">Skills</h2>
       
-      <!-- Featured Skills with Progress Bars -->
       <div class="featured-skills" style="margin-bottom: 2rem;">
         <h3 style="margin-bottom: 1rem; color: var(--accent);">Core Expertise</h3>
         <div class="skill-item animate-fade-in animate-stagger" *ngFor="let skill of featuredSkills">
@@ -25,7 +24,15 @@ import { HighlightSkillDirective } from '../highlight-skill.directive';
         </div>
       </div>
 
-      <!-- All Skills Chips -->
+      <div class="skill-categories grid" *ngIf="data()?.skill_categories?.length">
+        <div class="card skill-category animate-fade-in animate-stagger" *ngFor="let group of data()?.skill_categories">
+          <h3>{{ group.category }}</h3>
+          <div class="chips">
+            <span class="chip" *ngFor="let item of group.items" [appHighlightSkill]="item">{{ item }}</span>
+          </div>
+        </div>
+      </div>
+
       <div class="chips">
         <span class="chip animate-fade-in animate-stagger animate-float" 
               style="animation-delay: var(--delay)"
@@ -33,7 +40,6 @@ import { HighlightSkillDirective } from '../highlight-skill.directive';
               *ngFor="let skill of data()?.skills; let i = index" 
               [appHighlightSkill]="skill">{{ skill }}</span>
       </div>
-      <small class="muted animate-fade-in">Core skills are outlined and floating.</small>
     </section>
   `,
   styles: [`
@@ -44,16 +50,25 @@ import { HighlightSkillDirective } from '../highlight-skill.directive';
       margin: 0;
       font-size: 1.1rem;
     }
+    .skill-categories {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin-bottom: 1.5rem;
+    }
+    .skill-category h3 {
+      color: var(--accent);
+      margin-top: 0;
+      font-size: 1rem;
+    }
   `]
 })
 export class SkillsComponent implements OnInit {
   featuredSkills = [
-    { name: 'Angular/TypeScript', level: 95 },
-    { name: 'Java/Spring Boot', level: 90 },
-    { name: 'Python/Django', level: 85 },
-    { name: 'AWS/Cloud', level: 80 },
-    { name: 'Database Design', level: 88 },
-    { name: 'DevOps/CI-CD', level: 75 }
+    { name: 'Angular / TypeScript', level: 95 },
+    { name: 'Node.js / FastAPI', level: 88 },
+    { name: 'LangChain / LangGraph / RAG', level: 86 },
+    { name: 'Micro Frontends / Module Federation', level: 86 },
+    { name: 'WebSockets / Streaming Responses', level: 84 },
+    { name: 'Azure DevOps / AWS', level: 80 }
   ];
 
   constructor(private resume: ResumeService) {}

@@ -1,76 +1,279 @@
 {
-  "name": "Ranjith Kumar S",
-  "title": "MEAN Stack Developer | Oracle Certified Java Programmer",
+  "name": "Ranjith Kumar Siva Sankara Pillai",
+  "title": "Full Stack Developer | Generative AI Engineer | Senior Software Engineer at Gainwell Technologies",
   "location": "Chennai, Tamil Nadu, India",
+  "industry": "Software Development",
+  "zipCode": "600035",
   "email": "ranjith.kumar03@gmail.com",
   "phone": "+91-7358061196",
+  "linkedin": "https://www.linkedin.com/in/ranjith-kumar-siva-sankara-pillai-52590918",
+  "website": "https://ranjithkumar0203.github.io/RanjithResume/",
   "summary": [
-    "Oracle Certified Java Programmer with ~5 years of experience in MEAN stack development and Micro Frontends (Module Federation).",
-    "Experienced with Angular (v9+), Node.js, SDLC, agile teams, and cloud pipelines.",
-    "Strong analytical abilities; effective at coordinating across teams and delivering under pressure."
+    "Results-driven Full Stack Developer with 5+ years of experience building enterprise-grade web applications and AI-powered systems.",
+    "Specializes in Angular (v2-v20), Node.js, micro frontends, real-time communication systems, and modern Generative AI stacks including LangChain, LangGraph, RAG pipelines, and MCP workflows.",
+    "Builds intelligent AI chat applications with streaming responses and context-aware agent workflows, while using GitHub Copilot, OpenAI Codex, and Claude to accelerate delivery.",
+    "Earlier Project Engineer 2 background with Schneider Electric delivering Triconex-TMR Emergency Shutdown System (ESD) and Turbo Machinery Control (TMC) solutions for petrochemical, oil and gas, and power industries."
   ],
   "certifications": [
-    "AWS Cloud Quest Cloud Practitioner Badge",
+    "AWS Certified Cloud Practitioner",
     "Oracle Certified Java Programmer",
-    "ISTQB Certified Test Engineer",
-    "ISTQB Certified Test Manager",
-    "TUV Certified",
-    "ITIL Certified"
+    "ISTQB Certified - Test Engineer & Test Manager",
+    "ITIL Certified",
+    "ABB 800XA DCS | Schneider Triconex PLC",
+    "be10x AI Tools & ChatGPT Workshop - Issued April 2026"
+  ],
+  "skill_categories": [
+    {
+      "category": "Frontend",
+      "items": [
+        "Angular (v2-v20)",
+        "RxJS",
+        "Micro Frontends (Module Federation)",
+        "TypeScript",
+        "HTML5",
+        "CSS3"
+      ]
+    },
+    {
+      "category": "Backend",
+      "items": [
+        "Node.js",
+        "FastAPI",
+        "REST APIs",
+        "WebSockets",
+        "Socket.io",
+        "Pagination Systems"
+      ]
+    },
+    {
+      "category": "Generative AI",
+      "items": [
+        "LangChain",
+        "LangGraph",
+        "RAG Pipelines",
+        "MCP Workflows",
+        "Prompt Engineering"
+      ]
+    },
+    {
+      "category": "AI Tools",
+      "items": [
+        "GitHub Copilot",
+        "OpenAI Codex",
+        "Claude",
+        "Streaming Response Systems"
+      ]
+    },
+    {
+      "category": "Languages",
+      "items": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "TypeScript"
+      ]
+    },
+    {
+      "category": "Cloud, Databases & Testing",
+      "items": [
+        "AWS",
+        "Azure DevOps CI/CD Pipelines",
+        "MongoDB",
+        "MySQL",
+        "FAISS (Vector Store)",
+        "Jasmine",
+        "Cypress",
+        "ISTQB-certified QA Practices"
+      ]
+    }
   ],
   "skills": [
-    "Angular",
-    "JavaScript",
+    "Angular (v2-v20)",
+    "RxJS",
     "TypeScript",
+    "HTML5",
+    "CSS3",
+    "JavaScript",
     "Node.js",
-    "Express",
+    "FastAPI",
+    "Python",
+    "Java (1.8+)",
+    "Spring Boot",
+    "Express.js",
     "MongoDB",
-    "Mongoose",
+    "Mongoose ODM",
     "MySQL",
-    "Jasmine",
-    "Cypress",
-    "CDK DragDrop",
+    "REST APIs",
+    "WebSockets",
+    "Microservices Architecture",
+    "Module Federation",
+    "Micro Frontends",
+    "LangChain",
+    "LangGraph",
+    "RAG Pipelines",
+    "MCP Workflows",
+    "Prompt Engineering",
+    "GitHub Copilot",
+    "OpenAI Codex",
+    "Claude",
+    "Streaming Response Systems",
+    "Jasmine (Unit Testing)",
+    "Cypress (E2E Testing)",
+    "Cucumber (BDD)",
+    "CDK Drag & Drop",
     "Socket.io",
     "Azure DevOps",
     "AWS",
+    "Git/GitHub",
     "JIRA",
-    "Git",
     "Maven",
-    "Module Federation",
-    "Micro Frontends"
+    "Agile/Scrum",
+    "System Design",
+    "SCADA Systems",
+    "XML",
+    "Android SDK",
+    "FAISS (Vector Store)",
+    "PingOne OAuth2/OIDC"
   ],
   "experience": [
     {
       "company": "Gainwell Technologies",
-      "year": "2023",
+      "position": "Senior Software Engineer",
+      "employmentType": "Full-time",
+      "year": "Feb 2023 - Present",
+      "duration": "3 yrs 3 mos",
+      "location": "Chennai, Tamil Nadu, India - Remote",
+      "skillsLine": "AngularJS, TypeScript and +3 skills",
       "highlights": [
-        "Micro frontend using Angular 9 & Module Federation",
-        "Developed Angular modules and server-side pagination",
-        "Validated ATM screen code; supported JS/TS fixes",
-        "Created Node.js APIs with MongoDB",
-        "Deployed through Azure pipelines; daily Scrum participation"
+        "Angular 4 to 20, Module federation MF and Host, Angular 4 to 18 Migration, Feature module creation.",
+        "JWT to PingOne OAuth2 Migration, Java Backend.",
+        "Led Angular migration from v4 to v18 and deployed to production, modernizing a large-scale enterprise codebase.",
+        "Re-architected JWT authentication to PingOne using OAuth2/OIDC and RBAC, strengthening enterprise identity and access management.",
+        "Designed and deployed agent-based AI chat workflows with LangChain and LangGraph, delivering context-aware streaming response experiences."
       ]
     },
     {
       "company": "ACL Digital",
-      "year": "2022",
+      "position": "Software Technical Lead",
+      "employmentType": "Full-time",
+      "year": "Apr 2022 - Feb 2023",
+      "duration": "11 mos",
+      "location": "Chennai, Tamil Nadu, India",
+      "skillsLine": "JavaScript, Node.js and +6 skills",
       "highlights": [
-        "Developed Angular modules with server-side pagination",
-        "CDK Drag & Drop; Socket.io features",
-        "Node.js APIs with MongoDB; Scrum participation"
+        "Delivered Angular UI modules with Node.js RESTful backends for multiple product lines.",
+        "Integrated real-time features using Socket.io, enhancing live collaboration and notification systems.",
+        "Developed Angular modules with server-side pagination and CDK Drag & Drop features.",
+        "Collaborated in agile sprints, contributed to code reviews, and maintained high code quality standards."
       ]
     },
     {
       "company": "R Systems",
-      "year": "2021",
+      "position": "Project Lead",
+      "employmentType": "Full-time",
+      "year": "May 2021 - Apr 2022",
+      "duration": "1 yr",
+      "location": "Noida, Uttar Pradesh, India - Remote",
+      "skillsLine": "JavaScript, TypeScript and +1 skill",
       "highlights": [
-        "Bug fixing of ATM screens; Angular modules",
-        "Server-side pagination; Socket.io features",
-        "Created schemas & models (Mongoose); PRs via JIRA",
-        "Unit tests with Jasmine; e2e with Cypress + Cucumber"
+        "Working on Angular projects.",
+        "Developing ATM screens.",
+        "Mentoring others.",
+        "Built and maintained Angular + Node.js applications, ensuring cross-browser compatibility and responsive design.",
+        "Maintained and fixed ATM screen applications using Angular and TypeScript.",
+        "Implemented server-side pagination for large datasets and created MongoDB schemas using Mongoose ORM."
+      ]
+    },
+    {
+      "company": "Self-employed",
+      "position": "Freelancer Programmer and Tester",
+      "employmentType": "Freelance",
+      "year": "Jan 2018 - May 2021",
+      "duration": "3 yrs 5 mos",
+      "location": "India - Remote",
+      "highlights": [
+        "Delivered freelance programming and testing support across remote client work."
+      ]
+    },
+    {
+      "company": "Invensys - Acquired by Schneider Electric",
+      "position": "Project Application Engineer 2 Triconx",
+      "employmentType": "Full-time",
+      "year": "May 2012 - Sep 2017",
+      "duration": "5 yrs 5 mos",
+      "location": "Singapore",
+      "highlights": [
+        "Delivered Triconex-TMR Emergency Shutdown System (ESD) and Turbo Machinery Control (TMC) solutions.",
+        "Prepared system cabinets, marshalling cabinets, network architecture, Functional Design Specifications, I/O assignments, termination lists, as-shipped drawings, and as-built drawings.",
+        "Developed shutdown logic from cause-and-effect drawings and commissioned instruments from multiple vendors."
+      ]
+    },
+    {
+      "company": "Wartsila",
+      "position": "Design Engineer",
+      "employmentType": "Full-time",
+      "year": "Aug 2011 - May 2012",
+      "duration": "10 mos",
+      "location": "",
+      "highlights": [
+        "Worked on engineering design activities for industrial project delivery."
+      ]
+    },
+    {
+      "company": "Cognizant Technology Solutions",
+      "position": "Product Assurance Engineer",
+      "employmentType": "Full-time",
+      "year": "Aug 2009 - Jun 2011",
+      "duration": "1 yr 11 mos",
+      "location": "",
+      "highlights": [
+        "Supported product assurance and quality engineering activities."
+      ]
+    },
+    {
+      "company": "ABB INOPC",
+      "position": "Project Engineer",
+      "employmentType": "Full-time",
+      "year": "Jan 2006 - Jun 2009",
+      "duration": "3 yrs 6 mos",
+      "location": "BANGALORE",
+      "highlights": [
+        "Worked as Project Engineer on industrial engineering and automation project delivery."
+      ]
+    },
+    {
+      "company": "AS SHIPPING",
+      "position": "PROJECT ENGINEER",
+      "employmentType": "Full-time",
+      "year": "Jun 2005 - Jan 2006",
+      "duration": "8 mos",
+      "location": "CHENNAI",
+      "highlights": [
+        "Supported project engineering activities for shipping operations."
       ]
     }
   ],
   "projects": [
+    {
+      "name": "AI Chat Application",
+      "client": "RAG + Agent Workflow",
+      "duration": "2026",
+      "stack": [
+        "Angular",
+        "FastAPI",
+        "LangChain",
+        "LangGraph",
+        "FAISS",
+        "RAG",
+        "Streaming Responses"
+      ],
+      "description": "End-to-end AI chat platform with Angular frontend, FastAPI backend, real-time streaming responses, and context-grounded answers.",
+      "responsibilities": [
+        "Implemented a RAG pipeline using FAISS vector store and LangChain orchestration for accurate, context-grounded answers.",
+        "Modeled multi-step reasoning agent workflows with LangGraph concepts for complex, multi-turn user queries.",
+        "Built streaming response experiences for responsive AI chat interactions."
+      ]
+    },
     {
       "name": "CPE Software Update",
       "client": "KLA",
@@ -109,19 +312,21 @@
     {
       "employer": "Schneider Electric (Triconex), Singapore",
       "period": "2012 \u2013 2017",
-      "role": "Project Engineer",
+      "role": "Project Engineer 2 (FS Eng, TUV Rheinland #13045 / Instrumented Systems)",
       "highlights": [
-        "ORPIC/Liwa Plastics (3 compressors)",
-        "SIL-3 controller testing, HA tests, HMI graphics, third-party integrations",
-        "Test plans, FDS, I/O docs, and shipped documentation"
+        "Delivered Triconex-TMR Emergency Shutdown System (ESD) and Turbo Machinery Control (TMC) solutions for petrochemical, oil and gas, and power projects",
+        "Prepared system cabinets, marshalling cabinets, network architecture, Functional Design Specifications, I/O assignments, termination lists, as-shipped drawings, and as-built drawings",
+        "Developed shutdown logic from cause-and-effect drawings and supported electrical and instrumentation engineering design for classified hazardous areas",
+        "Commissioned instruments from multiple vendors and supported ORPIC/Liwa Plastics compressor automation work"
       ]
     }
   ],
   "education": [
     {
       "degree": "B.E. (Instrumentation and Control Engineering)",
-      "university": "University of Madras, Tamil Nadu",
-      "field": "Instrumentation and Control"
+      "university": "Madras University, Tamil Nadu",
+      "field": "Instrumentation and Control",
+      "year": "2002"
     }
   ],
   "languages": [

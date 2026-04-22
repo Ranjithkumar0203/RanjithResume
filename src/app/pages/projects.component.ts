@@ -11,13 +11,13 @@ import { ResumeService } from '../resume.service';
       <h2 class="animate-fade-in-left">Projects</h2>
       <div class="grid">
         <div class="card animate-fade-in animate-stagger animate-pulse" *ngFor="let p of data()?.projects">
-          <h3 class="animate-fade-in-left">{{ p.name }} <small class="muted">— {{ p.client }}</small></h3>
-          <div class="muted animate-fade-in">{{ p.duration }}</div>
+          <h3 class="animate-fade-in-left">{{ p.name }} <small class="muted" *ngIf="p.client">- {{ p.client }}</small></h3>
+          <div class="muted animate-fade-in" *ngIf="p.duration">{{ p.duration }}</div>
           <p class="animate-fade-in">{{ p.description }}</p>
-          <div class="chips">
+          <div class="chips" *ngIf="p.stack?.length">
             <span class="chip animate-fade-in animate-stagger animate-float" *ngFor="let t of p.stack">{{ t }}</span>
           </div>
-          <ul>
+          <ul *ngIf="p.responsibilities?.length">
             <li class="animate-fade-in animate-stagger" *ngFor="let r of p.responsibilities">{{ r }}</li>
           </ul>
         </div>

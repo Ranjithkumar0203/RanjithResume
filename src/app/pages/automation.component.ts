@@ -12,13 +12,20 @@ import { ResumeService } from '../resume.service';
       <div class="grid">
         <div class="card" *ngFor="let ia of data()?.industrial_automation">
           <h3>{{ ia.employer }} <small class="muted">({{ ia.period }})</small></h3>
+          <div class="muted role" *ngIf="ia.role">{{ ia.role }}</div>
           <ul>
             <li *ngFor="let h of ia.highlights">{{ h }}</li>
           </ul>
         </div>
       </div>
     </section>
-  `
+  `,
+  styles: [`
+    .role {
+      font-weight: 600;
+      margin: -0.25rem 0 0.75rem;
+    }
+  `]
 })
 export class AutomationComponent {
   constructor(private resume: ResumeService) {}
